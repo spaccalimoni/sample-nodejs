@@ -4,6 +4,10 @@ const port = 3000
 
 import { LoremIpsum } from "lorem-ipsum";
 
+var player = new JSMpeg.Player('ws://' + location.host + '/api/stream', {
+  canvas: document.getElementById('canvas')
+  });
+
 var lorem = new LoremIpsum({
   sentencesPerParagraph: {
     max: 8,
